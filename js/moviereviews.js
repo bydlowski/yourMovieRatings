@@ -199,7 +199,7 @@ $(document).ready(function () {
             // First ajax call to the OMDB API
             var sUrl, oData, mUrl, oData2;
             sUrl = 'http://www.omdbapi.com/?i=' + movieID + '&y=&type=movie&tomatoes=true';
-            mUrl = 'http://api.themoviedb.org/3/search/movie?query=' + movieName + '&api_key=0b56c7e05825db6e3182d1aa00d47307';
+            mUrl = 'http://api.themoviedb.org/3/search/movie?query=' + movieName + '&api_key=APIKEY';
             $.ajax(sUrl, {
                 complete: function(p_oXHR, p_sStatus){
                     oData = $.parseJSON(p_oXHR.responseText);
