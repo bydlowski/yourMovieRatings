@@ -1,0 +1,290 @@
+<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>MovieReviewer - Portfolio</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <!--<link rel="stylesheet" href="../../css/normalize.css">
+        <link rel="stylesheet" href="../../css/main.css">-->
+        <link rel="stylesheet" href="css/moviereviews.css">
+        <link rel="stylesheet" href="css/shared/jquery-ui.min.css">
+        <script type="text/javascript" src="js/shared/jquery.min.js"></script>
+        <script type="text/javascript" src="js/shared/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="js/shared/autocomplete.min.js"></script>
+        <script type="text/javascript" src="js/shared/defiant.min.js"></script>
+        <link rel="stylesheet" href="css/shared/bootstrap-theme.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,300,900' rel='stylesheet' type='text/css'>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class=".browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <header><h1>Best Movie Ratings</h1></header>
+        <section id="container">                    
+            <h3 class="topTitleYear">Title</h3>
+            <h4 class="topDirector">Director</h4>
+            <h4 class="topActors">Actors</h4>
+            <p class="topPlot">Plot</p>
+            <p class="topObservation">Observation</p>
+            <p class="closeContainer">Click anywhere outside this box to close it</p>
+        </section>
+        <section class="crateCoeficient">
+            <div class="pickRating1">
+                <div class="moviesRating0">
+                    <div class="moviesRatBox col-md-12">
+                        <h1>One rating to help us all</h1>
+                        <p>If you are anything like me, you try avoid bad movies at all costs. A little bit of research is always helpful when you want to find out if you are about to watch a <a href="https://en.wikipedia.org/wiki/The_Ridiculous_6">terrible flick</a>. But ratings websites are so different! The IMDB scores sometimes seem a bit too optimistic (maybe too many people voting?), while Metascores can be a bit harsh (they are based on critic reviews, who tend to be harder to please).</p>
+                        <p>What if you could "skew" the ratings to be a bit more closer to your taste? This is our goal!</p>
+                        <p>Over the next three pages you will be asked to rate movies based on your perception (choose movies you know well, not necessaruly the ones you like most - you want it to be accurate). Your scores will be added to our algorithm and the ratings will be more tailored to you!</p>
+                        <button id="personRating0" type="button" class="btn btn-default">Let's start?</button>
+                    </div>
+                </div>
+                <div class="moviesRating1">
+                    <div class="moviesRatBox col-md-3">
+                        <input type="radio" name="rating01pick" id="01-A" value="01-A" required />
+                        <label for="01-A" class="capaRating" style="background-image: url('img/01-A.jpg');"></label>
+                        <div>
+                            <p>Jurassic World (2015)</p>
+                            <a href="https://en.wikipedia.org/wiki/Jurassic_World"><span class="glyphicon glyphicon-question-sign"></span></a>
+                        </div>                    
+                        <input type="radio" name="rating01pick" id="02-A" value="02-A" />
+                        <label for="02-A" class="capaRating" style="background-image: url('img/02-A.jpg');"></label>
+                        <div>
+                            <p>Croods (2013)</p>
+                            <a href="https://en.wikipedia.org/wiki/The_Croods"><span class="glyphicon glyphicon-question-sign"></span></a>
+                        </div> 
+                        <p></p>
+                    </div>
+                    <div class="moviesRatBox col-md-3">
+                        <input type="radio" name="rating01pick" id="03-A" value="03-A" />
+                        <label for="03-A" class="capaRating" style="background-image: url('img/03-A.jpg');"></label>
+                        <div>
+                            <p>Guardians of the Galaxy (2014)</p>
+                            <a href="https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_(film)"><span class="glyphicon glyphicon-question-sign"></span></a>
+                        </div>
+                        <input type="radio" name="rating01pick" id="04-A" value="04-A" />
+                        <label for="04-A" class="capaRating" style="background-image: url('img/04-A.jpg');"></label>
+                        <div>
+                            <p>Django Unchained (2012)</p>
+                            <a href="https://en.wikipedia.org/wiki/Django_Unchained"><span class="glyphicon glyphicon-question-sign"></span></a>
+                        </div>
+                    </div>
+                    <div class="moviesRatBox col-md-3">
+                        <input type="radio" name="rating01pick" id="05-A" value="05-A" />
+                        <label for="05-A" class="capaRating" style="background-image: url('img/05-A.jpg');"></label>
+                        <div>
+                            <p>The Dark Knight Rises (2012)</p>
+                            <a href="https://en.wikipedia.org/wiki/The_Dark_Knight_Rises"><span class="glyphicon glyphicon-question-sign"></span></a>
+                        </div>
+                        <input type="radio" name="rating01pick" id="06-A" value="06-A" />
+                        <label for="06-A" class="capaRating" style="background-image: url('img/06-A.jpg');"></label>
+                        <div>
+                            <p>Inside Out (2015)</p>
+                            <a href="https://en.wikipedia.org/wiki/Inside_Out_(2015_film)"><span class="glyphicon glyphicon-question-sign"></span></a>
+                        </div>
+                    </div>
+                    <div class="personRatBox col-md-3">
+                        <p>Pick a movie and give your personal rating.<br />Tip: you should pick the movie you remember most, not the one you prefer!</p>
+                        <div class="ratingSlider">
+                            <p>
+                                <label for="amount1">Movie Rating:</label><br />
+                                <input type="text" id="amount1" readonly style="border:0; color:#333; font-weight:bold;">
+                            </p>
+                            <div id="slider-vertical1"></div>
+                            <button id="personRating1" type="button" class="btn btn-default">Submit this and rate<br />the next movie (01/03)</button>
+                            <p class="repick"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="moviesRating2">
+                    <div class="moviesRatBox col-md-3">
+                        <input type="radio" name="rating02pick" id="01-B" value="01-B" required />
+                        <label for="01-B" class="capaRating" style="background-image: url('img/01-B.jpg');"></label>
+                        <div>
+                            <p>Argo (2012)</p>
+                            <a href="https://en.wikipedia.org/wiki/Argo_(2012_film)"><span class="glyphicon glyphicon-question-sign"></span></a>
+                        </div>                    
+                        <input type="radio" name="rating02pick" id="02-B" value="02-B" />
+                        <label for="02-B" class="capaRating" style="background-image: url('img/02-B.jpg');"></label>
+                        <div>
+                            <p>Frozen (2013)</p>
+                            <a href="https://en.wikipedia.org/wiki/Frozen_(2013_film)"><span class="glyphicon glyphicon-question-sign"></span></a>
+                        </div> 
+                        <p></p>
+                    </div>
+                    <div class="moviesRatBox col-md-3">
+                        <input type="radio" name="rating02pick" id="03-B" value="03-B" />
+                        <label for="03-B" class="capaRating" style="background-image: url('img/03-B.jpg');"></label>
+                        <div>
+                            <p>World War Z (2013)</p>
+                            <a href="https://en.wikipedia.org/wiki/World_War_Z_(film)"><span class="glyphicon glyphicon-question-sign"></span></a>
+                        </div>
+                        <input type="radio" name="rating02pick" id="04-B" value="04-B" />
+                        <label for="04-B" class="capaRating" style="background-image: url('img/04-B.jpg');"></label>
+                        <div>
+                            <p>The Wolf of Wall Street (2013)</p>
+                            <a href="https://en.wikipedia.org/wiki/The_Wolf_of_Wall_Street_(2013_film)"><span class="glyphicon glyphicon-question-sign"></span></a>
+                        </div>
+                    </div>
+                    <div class="moviesRatBox col-md-3">
+                        <input type="radio" name="rating02pick" id="05-B" value="05-B" />
+                        <label for="05-B" class="capaRating" style="background-image: url('img/05-B.jpg');"></label>
+                        <div>
+                            <p>The LEGO Movie (2014)</p>
+                            <a href="https://en.wikipedia.org/wiki/The_Lego_Movie"><span class="glyphicon glyphicon-question-sign"></span></a>
+                        </div>
+                        <input type="radio" name="rating02pick" id="06-B" value="06-B" />
+                        <label for="06-B" class="capaRating" style="background-image: url('img/06-B.jpg');"></label>
+                        <div>
+                            <p>Gravity (2013)</p>
+                            <a href="https://en.wikipedia.org/wiki/Gravity_(film)"><span class="glyphicon glyphicon-question-sign"></span></a>
+                        </div>
+                    </div>
+                    <div class="personRatBox col-md-3">
+                        <p>Pick a movie and give your personal rating.<br />Tip: you should pick the movie you remember most, not the one you prefer!</p>
+                        <div class="ratingSlider">
+                            <p>
+                                <label for="amount2">Movie Rating:</label><br />
+                                <input type="text" id="amount2" readonly style="border:0; color:#333; font-weight:bold;">
+                            </p>
+                            <div id="slider-vertical2"></div>
+                            <button id="personRating2" type="button" class="btn btn-default">Submit this and rate<br />the next movie (02/03)</button>
+                            <p class="repick"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="moviesRating3">
+                    <div class="moviesRatBox col-md-3">
+                        <input type="radio" name="rating03pick" id="01-C" value="01-C" required />
+                        <label for="01-C" class="capaRating" style="background-image: url('img/01-C.jpg');"></label>
+                        <div>
+                            <p>Minions (2015)</p>
+                            <a href="https://en.wikipedia.org/wiki/Argo_(2012_film)"><span class="glyphicon glyphicon-question-sign"></span></a>
+                        </div>                    
+                        <input type="radio" name="rating03pick" id="02-C" value="02-C" />
+                        <label for="02-C" class="capaRating" style="background-image: url('img/02-C.jpg');"></label>
+                        <div>
+                            <p>Mad Max: Fury Road (2015)</p>
+                            <a href="https://en.wikipedia.org/wiki/Frozen_(2013_film)"><span class="glyphicon glyphicon-question-sign"></span></a>
+                        </div> 
+                        <p></p>
+                    </div>
+                    <div class="moviesRatBox col-md-3">
+                        <input type="radio" name="rating03pick" id="03-C" value="03-C" />
+                        <label for="03-C" class="capaRating" style="background-image: url('img/03-C.jpg');"></label>
+                        <div>
+                            <p>Birdman (2014)</p>
+                            <a href="https://en.wikipedia.org/wiki/World_War_Z_(film)"><span class="glyphicon glyphicon-question-sign"></span></a>
+                        </div>
+                        <input type="radio" name="rating03pick" id="04-C" value="04-C" />
+                        <label for="04-C" class="capaRating" style="background-image: url('img/04-C.jpg');"></label>
+                        <div>
+                            <p>Interstellar (2014)</p>
+                            <a href="https://en.wikipedia.org/wiki/The_Wolf_of_Wall_Street_(2013_film)"><span class="glyphicon glyphicon-question-sign"></span></a>
+                        </div>
+                    </div>
+                    <div class="moviesRatBox col-md-3">
+                        <input type="radio" name="rating03pick" id="05-C" value="05-C" />
+                        <label for="05-C" class="capaRating" style="background-image: url('img/05-C.jpg');"></label>
+                        <div>
+                            <p>Maleficent (2014)</p>
+                            <a href="https://en.wikipedia.org/wiki/The_Lego_Movie"><span class="glyphicon glyphicon-question-sign"></span></a>
+                        </div>
+                        <input type="radio" name="rating03pick" id="06-C" value="06-C" />
+                        <label for="06-C" class="capaRating" style="background-image: url('img/06-C.jpg');"></label>
+                        <div>
+                            <p>American Sniper (2014)</p>
+                            <a href="https://en.wikipedia.org/wiki/Gravity_(film)"><span class="glyphicon glyphicon-question-sign"></span></a>
+                        </div>
+                    </div>
+                    <div class="personRatBox col-md-3">
+                        <p>Pick a movie and give your personal rating.<br />Tip: you should pick the movie you remember most, not the one you prefer!</p>
+                        <div class="ratingSlider">
+                            <p>
+                                <label for="amount3">Movie Rating:</label><br />
+                                <input type="text" id="amount3" readonly style="border:0; color:#333; font-weight:bold;">
+                            </p>
+                            <div id="slider-vertical3"></div>
+                            <button id="personRating3" type="button" class="btn btn-default">Submit</button>
+                            <p class="repick"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skip corner"><b>SKIP THIS PROCESS</b></div>
+            </div>
+        </section>
+        <section class="search-box">
+            <div class="btn-group">
+                <div id="divSearch" class="form-group">
+                    <input id="txtSearch" class="form-control" type="text" autocomplete="off" placeholder="Type the name of the film" dcvalue="">
+                    <span id="searchclear" class="glyphicon glyphicon-remove-circle"></span>
+                </div>
+            </div>
+        </section>
+        <section class="row">
+            <div class="movie-info col-md-4">
+                <div class="posterContainer">
+                    <span class="poster">Poster</span>
+                    <div class="moreInfoMovie">
+                        <p>More information about this movie</p>
+                    </div>
+                </div>
+            </div>
+            <div class="rat-info col-md-2" style="background-color: #deb522;">
+                <img src="img/LogoImdb.png" class="logo-info">
+                <p class="imdbRating">IMDB<br />Rating</p>
+                <p class="coefTitle">Your<br />coefficient</p>
+                <p class="coefNumber coefA" style="border:8px solid #deb522">25%</p>
+            </div>
+            <div class="rat-info col-md-2" style="background-color: #3A9425;">
+                <img src="img/LogoRotten.png" class="logo-info">
+                <p class="rottenRating">Tomatoes<br />Rating</p>
+                <p class="coefTitle">Your<br />coefficient</p>
+                <p class="coefNumber coefB" style="border:8px solid #3A9425">25%</p>
+            </div>
+            <div class="rat-info col-md-2" style="background-color: #000;">
+                <img src="img/LogosMeta.png" class="logo-info">
+                <p class="metasRating">Metascore<br />Rating</p>
+                <p class="coefTitle">Your<br />coefficient</p>
+                <p class="coefNumber coefC" style="border:8px solid #000">25%</p>
+            </div>
+            <div class="moviedb-info rat-info col-md-2" style="background-color: #404040;">
+                <img src="img/LogosTmdb.png" class="logo-info" style="width: 15em;margin: auto;margin-bottom: 1em;">
+                <p class="tmdbRating">The Movie<br />DB Rating</p>
+                <p class="coefTitle">Your<br />coefficient</p>
+                <p class="coefNumber coefD" style="border:8px solid #404040">25%</p>
+            </div>
+            <div class="coeficient-info col-md-8">
+                <h2>Personal movie rating:</h2>
+                <h1 id="finalRating">N/A</h1>
+            </div>
+        </section>
+        <div id="promise1" style="display: none"></div>
+        <div id="promise2" style="display: none"></div>
+        <section><a href="../index.html" id="returnPortolio">Return to portfolio</a></section>        
+        
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script type="text/javascript" src="js/moviereviews.js"></script>
+        <!--<script type="text/javascript" src="js/coeficient.js"></script>-->
+        <script type="text/javascript" src="js/movies.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>

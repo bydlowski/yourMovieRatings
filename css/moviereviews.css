@@ -1,0 +1,347 @@
+html, body {
+	font-family:'Lato'!important;
+}
+body {
+	background: lemonchiffon;
+}
+header {
+	background-color: coral;
+}
+header h1 {
+    font-weight: bold;
+    font-size: 3.2em;
+    margin-top: 23px;
+    right: 3%;
+    position: absolute;
+    font-family: monospace;
+}
+input {
+	-webkit-appearance: none;
+	appearance:none;
+}
+/***** BUTTON *****/
+#returnPortolio {
+	padding: 15px;
+    border: 2px solid cyan;
+	font-size: 1.3em!important;
+	background-color: white;
+    color: black;
+    text-decoration: inherit;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+}
+#returnPortolio:hover {
+	background-color: azure;
+}
+/***** COEFICIENT *****/
+.crateCoeficient {
+	position: absolute;
+	width: 80vw;
+	height: 86vh;
+    background-color: ghostwhite;
+    z-index: 10;
+    margin: auto;
+    left: 50%;
+    margin-left: -40vw;
+    top: 53%;
+    margin-top: -43vh;
+    border: 2px solid black;
+}
+.moviesRating0 {
+	/*display: none;*/
+	text-align: justify;
+}
+.moviesRating0 h1 {
+	margin: 1em;
+    font-size: 4em;
+	text-align: center;
+}
+.moviesRating0 > div > p {
+	margin: 0.5em 6em;
+    font-size: 1.6em;
+}
+.moviesRating0 > div > button {
+	display: block;
+    margin: 3em auto;
+    border-color: black;
+    font-size: 2em;
+}
+.moviesRating1 {
+	display: none;
+}
+.moviesRating2 {
+	display: none;
+}
+.moviesRating3 {
+	display: none;
+}
+.moviesRatBox {
+	height: 70vh;
+}
+.moviesRatBox p {
+	display: -webkit-inline-box;
+	display: inline-box;
+	margin: 0 10px;
+	font-size: 18px;
+}
+.moviesRatBox div {
+	text-align: center;
+	display: block;
+	margin: 1em 0 0 0;
+}
+.capaRating {
+	cursor:pointer;
+    background-size:contain;
+    background-repeat:no-repeat;
+    display:block;
+    width:180px;
+    height:274px;
+    margin: 2em auto;
+}
+.capaRating:hover {
+	border: 3px solid white;
+	height: 272px;
+}
+.moviesRatBox input:checked + .capaRating{
+	border: 3px solid red;
+	height: 271px;
+}
+.personRatBox {
+	text-align: center;
+	margin: 2em 0;
+	font-size: 18px;
+}
+.ratingSlider {
+	font-size: 35px;
+}
+.ratingSlider button {
+	font-size: 20px;
+}
+.ui-slider-handle {
+	left: -9px!important;
+}
+#slider-vertical1 {
+	height: 9em!important;
+	margin: 1em auto;
+}
+#slider-vertical2 {
+	height: 9em!important;
+	margin: 1em auto;
+}
+#slider-vertical3 {
+	height: 9em!important;
+	margin: 1em auto;
+}
+.ratingSlider input {
+	width: 3em;
+	text-align: center
+}
+.corner {
+	position: absolute;
+	height: 1em;
+    bottom: 1em;
+    right: 10px;
+    cursor: pointer;
+}
+.skip {
+	right: 1em;
+}
+.ratingBtn {
+	margin: 2em;
+    font-size: 19px!important;
+    vertical-align: 3px!important;
+    background-color: whitesmoke;
+}
+.repick {
+	line-height: 3em;
+	font-size: 15px;
+}
+/***** SEARCH BOX *****/
+.search-box {
+	position: absolute;
+    margin-left: -15vw;
+    left: 50%;
+}
+#txtSearch {
+	width: 30vw;
+    margin: 10px auto;
+    height: 5vh;
+}
+.autocomplete-suggestions {
+	border: 1px solid whitesmoke;
+	background-color: white;
+}
+.autocomplete-suggestion {
+	margin: 5px 0;
+}
+#divSearch input[type=text] {
+	font-size: 2em
+}
+#searchclear {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    height: 25px;
+    margin: auto;
+    font-size: 25px;
+    cursor: pointer;
+    color: #ccc;
+}
+.autocomplete-suggestion {
+	cursor: pointer;
+}
+.autocomplete-suggestion:hover {
+	color:red;
+}
+/***** MOVIE CONTAINER *****/
+.row {
+	display: none;
+	height: 90vh;
+	width: 100%;
+	margin-right: 0!important;
+    margin-left: 0!important;
+    width: 100vw;
+    background-color: coral;
+}
+.posterContainer {
+	height: 90vh;
+	width: 100%;
+	position: absolute;
+	overflow: hidden;
+}
+.poster img {
+	width: 100%;
+    margin: auto;
+    display: block;
+    overflow: hidden;
+}
+.moreInfoMovie {
+    bottom: 4px;
+    padding: 7px;
+    width: 25%;
+    text-align: center;
+    background-color: rgba(255,255,255,0.7);
+    position: absolute;
+    left: 4px;
+    font-size: 1em;
+    cursor:pointer;
+}
+.moreInfoMovie:hover {
+	background-color: rgba(255,255,255,0.9);
+}
+.moreInfoMovie p {
+	margin:0;
+}
+#container {
+	display: none;
+	position: absolute;
+    z-index: 20;
+    width: 60vw;
+    height: 50vh;
+    background-color: white;
+    margin-top: 5vh;
+    border: 2px solid black;
+    border-radius: 5px;
+    left: 50%;
+    margin-left: -30vw;
+}
+#container h3 {
+	text-align: center;
+	font-size: 3em;
+	font-weight: bold;
+}
+#container h4 {
+	text-align: center;
+	font-size: 1.8em;
+}
+#container p {
+    font-size: 1.4em;
+    margin: 2em 3em 0 3em;
+}
+.topDirector {
+	margin-top: 1em;	
+}
+.closeContainer {
+	position: absolute;
+	height: 1em;
+    bottom: 0.5em;
+    right: 10px;
+    margin: 0!important;
+    text-transform: uppercase;
+}
+/***** OTHER CONTAINERS *****/
+.col-md-4 {
+	padding-left: 0!important;
+	padding-right: 0!important;
+}
+.rat-info {
+	height: 60vh;
+	padding-left: 0!important;
+	padding-right: 0!important;
+}
+.col-md-2 p {
+	color: white;
+	font-size: 2.5em;
+	text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.col-md-2 p span {
+	display: inline-block;
+	background-color: white;
+	color: black;
+	padding: 15px;
+	border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    padding-top: 30px;
+    font-size: 60px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.coefTitle {
+	line-height: 1em;
+	margin-top: 2em;
+	font-size: 1.5em!important;
+}
+.coefNumber {
+	font-size: 1.8em!important;
+    background-color: white;
+    color: black!important;
+    border-radius: 50%;
+    width: 3.2em;
+    height: 3.2em;
+    padding-top: 15px;
+    font-weight: bold!important;
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    margin-left: -50px;
+}
+.logo-info {
+    margin: 2.5em auto;
+    display: block;
+}
+.coeficient-info {
+	right: 0;
+    bottom: 0;
+    height: 15vw;
+    position: absolute!important;
+}
+.coeficient-info h2 {
+	font-size: 80px;
+    color: white;
+    display: -webkit-inline-box;
+    margin: 8vh 0 0 5vw;
+}
+.coeficient-info h1 {
+	font-size: 120px;
+	font-weight: bold;
+    color: gold;
+    display: -webkit-inline-box;
+    margin: 8vh 0 0 2vw;
+    text-shadow: 2px 2px #ff0000;
+    vertical-align: -17px;
+}
