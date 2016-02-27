@@ -48,6 +48,12 @@ input {
     margin-top: -43vh;
     border: 2px solid black;
 }
+.crateCoeficient2 {
+	position: absolute;
+	width: 60vw!important;
+	height: 80vh!important;
+	margin-left: -30vw!important;
+}
 .moviesRating0 {
 	/*display: none;*/
 	text-align: justify;
