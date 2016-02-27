@@ -79,7 +79,8 @@ $(document).ready(function () {
     $( "#amount2" ).val( $( "#slider-vertical2" ).slider( "value" ) );
     $( "#amount3" ).val( $( "#slider-vertical3" ).slider( "value" ) );
     // Here the coefficient box process with button clicking and changing through each page
-    $(document).on('click', '#personRating0', function(){  
+    $(document).on('click', '#personRating0', function(){ 
+        $('.crateCoeficient').toggleClass('crateCoeficient2');
         $('.moviesRating0').css('display', 'none');
         $('.moviesRating1').css('display', 'block');
     });
@@ -199,7 +200,7 @@ $(document).ready(function () {
             // First ajax call to the OMDB API
             var sUrl, oData, mUrl, oData2;
             sUrl = 'http://www.omdbapi.com/?i=' + movieID + '&y=&type=movie&tomatoes=true';
-            mUrl = 'http://api.themoviedb.org/3/search/movie?query=' + movieName + '&api_key=APIKEY';
+            mUrl = 'http://api.themoviedb.org/3/search/movie?query=' + movieName + '&api_key=0b56c7e05825db6e3182d1aa00d47307';
             $.ajax(sUrl, {
                 complete: function(p_oXHR, p_sStatus){
                     oData = $.parseJSON(p_oXHR.responseText);
@@ -213,11 +214,7 @@ $(document).ready(function () {
                     } else {
                         ratingTomato = "N/A";
                     }
-                    if (oData.Poster === "N/A") {
-                        $('.poster').html('<h1 style="text-align: center;width: 50%;display: block;margin: 5em auto;">No poster available for this movie!</h1>');
-                    } else {
-                        $('.poster').html('<img src="' + oData.Poster + '"/>');
-                    }
+                    
                     ratingIMDB = Number(oData.imdbRating);
                     $('.imdbRating').html("Rating<br /><span class='rating'>" + ratingIMDB + "</span>");
                     $('.rottenRating').html("Rating<br /><span class='rating'>" + ratingTomato + "</span>");
@@ -234,6 +231,12 @@ $(document).ready(function () {
                 $.ajax(mUrl, {
                     complete: function(p_oXHR, p_sStatus){
                         oData2 = $.parseJSON(p_oXHR.responseText);
+                        var moviePoster = "http://image.tmdb.org/t/p/w500/" + oData2.results[0].poster_path;
+                            if (moviePoster === null) {
+                            $('.poster').html('<h1 style="text-align: center;width: 50%;display: block;margin: 5em auto;">No poster available for this movie!</h1>');
+                        } else {
+                            $('.poster').html('<img src="' + moviePoster + '"/>');
+                        }
                         var ratingTMDBpre = Math.round(oData2.results[0].vote_average * 10) / 10;
                         if (ratingTMDBpre > 0 ) {
                             ratingTMDB = ratingTMDBpre;
